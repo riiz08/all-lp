@@ -1,47 +1,33 @@
 "use client";
 
 import { useEffect } from "react";
+import * as fbq from "@/lib/fpixel";
+import Script from "next/script";
 
 const MetaPixel = () => {
   useEffect(() => {
-    const pixelId = process.env.NEXT_PUBLIC_PIXEL_ID;
-
-    if (typeof window !== "undefined" && pixelId) {
-      (function (f: Window, b: Document, e: string, v: string) {
-        if (!f.fbq) {
-          const n = function (command: string, ...args: unknown[]) {
-            if (f.fbq.callMethod) {
-              f.fbq.callMethod(...args);
-            } else {
-              f.fbq.queue.push(args);
-            }
-          } as Fbq;
-
-          n.queue = [];
-          n.loaded = true;
-          n.version = "2.0";
-          f.fbq = n;
-          f._fbq = n;
-        }
-
-        const t = b.createElement(e) as HTMLScriptElement;
-        t.async = true;
-        t.src = v;
-        const s = b.getElementsByTagName(e)[0];
-        s?.parentNode?.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-
-      window.fbq("init", pixelId); // Menggunakan Pixel ID dari .env
-      window.fbq("track", "PageView");
-    }
+    fbq.pageVIew();
   }, []);
 
-  return null; // Tidak perlu merender apapun
+  return (
+    <Script
+      id="fb-pixel"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', ${fbq.FB_PIXEL_ID});
+    `,
+      }}
+    />
+  );
 };
 
 export default MetaPixel;

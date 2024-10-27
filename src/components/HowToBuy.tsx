@@ -8,50 +8,54 @@ import { Card, CardContent } from "./ui/card";
 
 const HowToBuy = () => {
   return (
-    <section className="flex items-center gap-4 justify-center py-6 px-8">
-      <Card className="w-1/2 py-2 px-4 h-[400]">
+    <section className="flex items-center flex-col-reverse lg:flex-row gap-4 justify-center py-6 px-8">
+      <Card className="lg:w-1/2 py-2 px-4 h-[400]">
         <CardContent>
-          <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
+          <h2 className="scroll-m-20 text-xl lg:text-3xl font-semibold tracking-tight first:mt-0">
             Cara Mudah untuk Memesan Jaket Coach Taslan Anda
           </h2>
           <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
             <li>
-              <div className="font-semibold mb-1">Beli Sekarang</div>
-              <p className="text-sm font-medium leading-none">
+              <div className="font-semibold mb-1 lg:text-lg text-sm">
+                Beli Sekarang
+              </div>
+              <p className="lg:text-sm text-xs font-medium leading-4">
                 Klik beli sekarang lalu akan di arahkan ke tiktok shop
               </p>
             </li>
             <li>
-              <div className="font-semibold mb-1">
+              <div className="font-semibold mb-1 lg:text-lg text-sm">
                 Pilih produk favorit anda
               </div>
-              <p className="text-sm font-medium leading-none">
+              <p className="lg:text-sm text-xs font-medium leading-4">
                 Telusuri koleksi jaket coach dan pilih model serta ukuran yang
                 sesuai dengan gaya Anda.
               </p>
             </li>
             <li>
-              <div className="font-semibold mb-1">
+              <div className="font-semibold mb-1 lg:text-lg text-sm">
                 Tambahkan ke Keranjang & Lakukan Checkout
               </div>
-              <p className="text-sm font-medium leading-none">
+              <p className="lg:text-sm text-xs font-medium leading-4">
                 Klik Tambah ke Keranjang dan lanjutkan ke halaman checkout untuk
                 melengkapi detail pembelian.
               </p>
             </li>
             <li>
-              <div className="font-semibold mb-1">Pilih Metode Pembayaran</div>
-              <p className="text-sm font-medium leading-none">
+              <div className="font-semibold mb-1 lg:text-lg text-sm">
+                Pilih Metode Pembayaran
+              </div>
+              <p className="lg:text-sm text-xs font-medium leading-4">
                 Kami menyediakan berbagai opsi pembayaran, termasuk transfer
                 bank, kartu kredit, dan e-wallet. Pilih metode yang paling
                 nyaman untuk Anda.
               </p>
             </li>
             <li>
-              <div className="font-semibold mb-1">
+              <div className="font-semibold mb-1 lg:text-lg text-sm">
                 Terima Pesanan di Rumah Anda
               </div>
-              <p className="text-sm font-medium leading-none">
+              <p className="lg:text-sm text-xs font-medium leading-4">
                 Setelah pembayaran dikonfirmasi, pesanan Anda akan segera
                 dikirim dan tiba dalam beberapa hari kerja.
               </p>
@@ -60,7 +64,7 @@ const HowToBuy = () => {
         </CardContent>
       </Card>
 
-      <Card className="w-1/2 py-2 px-4 min-h-[400]">
+      <Card className="lg:w-1/2 py-2 px-4 min-h-[400]">
         <CardContent>
           <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
             Pertanyaan yang Sering Ditanyakan

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { ShoppingCartIcon } from "lucide-react";
+import * as fbq from "@/lib/fpixel";
 
 interface ButtonProps {
   name: string;
@@ -22,7 +23,7 @@ export const BuyButton: React.FC<ButtonProps> = ({
   const route = useRouter();
 
   const handleButton = () => {
-    window.fbq("track", "Beli", {
+    fbq.event("Beli", {
       name,
       price,
       platform,

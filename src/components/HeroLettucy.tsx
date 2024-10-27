@@ -4,10 +4,10 @@ import { BuyButton } from "./BuyButton";
 
 const HeroLettucy = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen px-10 bg-[url('/assets/images/lettucy/hero-bg.png')] bg-cover bg-center">
-      <div className="w-1/2">
+    <div className="flex items-center py-8 lg:py-0 justify-center min-h-screen lg:flex-row flex-col-reverse px-10 bg-[url('/assets/images/lettucy/hero-bg.png')] bg-cover bg-center">
+      <div className="w-full lg:w-1/2">
         <Badge variant="secondary">Dapatkan diskon hingga 40%</Badge>
-        <h1 className="scroll-m-20 mb-6 mt-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
+        <h1 className="scroll-m-20 mb-2 lg:mb-6 mt-2 lg:mt-4 text-2xl font-extrabold tracking-tight lg:text-5xl">
           Buktikan Gaya Anda dengan Jaket Coach yang Ikonis!
         </h1>
         <p className="leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground mb-4">
@@ -29,7 +29,7 @@ const HeroLettucy = () => {
         alt="Jaket Coach Lettucy"
         height={1080}
         width={720}
-        className="w-1/2"
+        className="w-full lg:w-1/2"
       />
     </div>
   );

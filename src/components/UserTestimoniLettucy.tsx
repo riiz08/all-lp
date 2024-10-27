@@ -5,12 +5,12 @@ import Link from "next/link";
 
 const UserTestimoniLettucy = () => {
   return (
-    <section className="py-6 px-8 flex items-center justify-center">
-      <div className="w-1/2 text-center">
-        <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
+    <section className="py-6 px-8 flex items-center flex-col lg:flex-row justify-center">
+      <div className="lg:w-1/2 text-center">
+        <h2 className="scroll-m-20 text-xl lg:text-3xl font-semibold tracking-tight first:mt-0">
           Apa Kata Mereka Tentang Jaket Coach Kami?
         </h2>
-        <p className="leading-7 [&:not(:first-child)]:mt-2 text-muted-foreground">
+        <p className="leading-7 [&:not(:first-child)]:mt-2 text-sm lg:text-md text-muted-foreground">
           Ratusan pelanggan puas dengan kualitas, kenyamanan, dan desain jaket
           coach Taslan kami
         </p>
@@ -20,10 +20,10 @@ const UserTestimoniLettucy = () => {
           alt="Kenapa harus lettucy"
           width={1080}
           height={720}
-          className="w-96 mx-auto"
+          className="lg:w-96 mx-auto"
         />
 
-        <small className="text-xs mt-4 font-medium leading-none">
+        <small className="text-xs mt-6 lg:mt-4 font-medium leading-none">
           Ingin Merasakan Sendiri Kualitasnya?
           <Link
             href={"https://vt.tokopedia.com/t/ZSj8M6Y6w"}
@@ -34,7 +34,7 @@ const UserTestimoniLettucy = () => {
           dan Bergabunglah dengan Ratusan Pelanggan Kami yang Puas!
         </small>
       </div>
-      <div className="w-1/2 flex flex-col gap-4">
+      <div className="lg:w-1/2 mt-6 lg:mt-0 flex flex-col gap-4">
         <Card className="pt-4">
           <CardContent className="flex items-center gap-4">
             <Avatar>
@@ -45,11 +45,11 @@ const UserTestimoniLettucy = () => {
               <AvatarFallback>AS</AvatarFallback>
             </Avatar>
             <div>
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <h4 className="scroll-m-20 text-sm lg:text-xl font-semibold tracking-tight">
                 Andi Setiawan
               </h4>
               <p>⭐️⭐️⭐️⭐️⭐️</p>
-              <p className="leading-7 [&:not(:first-child)]:mt-2 text-muted-foreground">
+              <p className="lg:leading-7 leading-5 text-xs lg:[&:not(:first-child)]:mt-2 text-muted-foreground">
                 Jaket ini luar biasa! Saya suka bagaimana jaket ini tahan angin
                 dan tetap ringan. Sangat cocok untuk perjalanan motor setiap
                 hari. Desainnya juga keren, saya dapat banyak pujian!
@@ -68,11 +68,11 @@ const UserTestimoniLettucy = () => {
               <AvatarFallback>RU</AvatarFallback>
             </Avatar>
             <div>
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <h4 className="scroll-m-20 text-sm lg:text-xl font-semibold tracking-tight">
                 Rina Utami
               </h4>
               <p>⭐️⭐️⭐️⭐️⭐️</p>
-              <p className="leading-7 [&:not(:first-child)]:mt-2 text-muted-foreground">
+              <p className="lg:leading-7 leading-5 text-xs lg:[&:not(:first-child)]:mt-2 text-muted-foreground">
                 Bahan Taslan-nya benar-benar berkualitas! Sablon jaket juga
                 tidak luntur meski sudah beberapa kali dicuci. Jaket coach ini
                 nyaman dipakai seharian. Worth every penny!
@@ -91,11 +91,11 @@ const UserTestimoniLettucy = () => {
               <AvatarFallback>BP</AvatarFallback>
             </Avatar>
             <div>
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <h4 className="scroll-m-20 text-sm lg:text-xl font-semibold tracking-tight">
                 Budi Prasetyo
               </h4>
               <p>⭐️⭐️⭐️⭐️</p>
-              <p className="leading-7 [&:not(:first-child)]:mt-2 text-muted-foreground">
+              <p className="lg:leading-7 leading-5 text-xs lg:[&:not(:first-child)]:mt-2 text-muted-foreground">
                 Jaket yang sangat stylish dan nyaman dipakai. Saya suka
                 desainnya yang minimalis tapi tetap trendi. Pengiriman cepat dan
                 kualitas produk sesuai harapan!

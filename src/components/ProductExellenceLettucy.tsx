@@ -20,7 +20,7 @@ const ProductExellenceLettucy = () => {
           Tampil Stylish dan Nyaman dengan Bahan Premium serta Desain Fungsional
         </p>
       </div>
-      <div className="py-6 flex items-center gap-4 flex-wrap">
+      <div className="py-6 flex justify-center items-center gap-4 flex-wrap">
         <Card className="max-w-60 min-h-60 hover:scale-105 transition-all cursor-pointer">
           <CardHeader className="flex items-center justify-center">
             <CardTitle className="text-center text-md">
@@ -85,7 +85,7 @@ const ProductExellenceLettucy = () => {
       </div>
       <Button asChild variant={"link"}>
         <Link href={"https://vt.tokopedia.com/t/ZSj8M6Y6w"}>
-          Jelajahi Semua Keunggulan Jaket Coach Kami dan Dapatkan Sekarang!
+          Dapatkan Sekarang Juga!
         </Link>
       </Button>
     </section>

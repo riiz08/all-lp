@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MetaPixel from "@/components/MetaPixel";
 import { ThemeProvider } from "@/components/theme-provider";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Lettucy Jaket Windbreaker",
@@ -13,21 +14,20 @@ export default function LettucyJacketLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body>
-          <MetaPixel />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <Head>
+        <MetaPixel />
+      </Head>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
